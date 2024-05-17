@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mailto Link Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Mailto Link Generator</h1>
+    <p>Create mailto links with subject, body, bcc, cc and generate HTML code with this simple mailto link generator.</p>
+  </header>
+
+  <form id="mailtoForm">
+    <div>
+      <label for="to">To:</label>
+      <input type="email" id="to" name="to" required>
+    </div>
+    <div>
+      <label for="cc">Cc:</label>
+      <input type="email" id="cc" name="cc">
+    </div>
+    <div>
+      <label for="bcc">Bcc:</label>
+      <input type="email" id="bcc" name="bcc">
+    </div>
+    <div>
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject">
+    </div>
+    <div>
+      <label for="body">Body:</label>
+      <textarea id="body" name="body"></textarea>
+    </div>
+    <div>
+      <button type="button" onclick="generateMailtoLink()">Generate Mailto Link</button>
+    </div>
+  </form>
+
+  <div>
+    <label for="mailtoLink">Mailto Link:</label>
+    <textarea id="mailtoLink" readonly></textarea>
+    <button onclick="copyToClipboard()">Copy to Clipboard</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
